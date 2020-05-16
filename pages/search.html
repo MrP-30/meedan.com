@@ -1,0 +1,16 @@
+---
+title: Search
+layout: landing_page
+class: blog
+permalink: search
+h2: What are you looking for?
+---
+{% assign stories = site.data.contentful.spaces.stories.story | sort: 'alt_date_string' | reverse  %}
+<div class="main-grid section-margin">
+    <div class="main-grid__1-12">
+        <div class="search-box" id="search-searchbar"></div>
+        <div class="module module-story-list section-margin" id="search-hits"></div>
+    </div>
+</div>
+{% include algolia.html %}
+{% include footer_small.html %}

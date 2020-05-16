@@ -250,3 +250,27 @@ page_gen:
     template: 'event'
     name: 'slug'
     dir: '/events/'
+
+# Search
+algolia:
+  application_id: XVQE72Q0TQ
+  index_name:     meedan.com
+  nodes_to_index: 'p,blockquote'
+  search_only_api_key: d031b4f0809f3999da155451bffba6db
+  files_to_exclude:
+    - projects/check-global/index.html
+    - blog/caio-almeida-on-software-that-serves-a-global-community/index.html
+    - blog/going-virtual-how-meedan-is-doing-the-conference-thing-online/index.html
+    - /blog/meet-our-regional-program-managers-apac-latin-america-and-africa/index.html
+    - /blog/database-of-expert-sourced-covid-19-information-for-fact-checkers/index.html
+    - /blog/new-microgrants-for-covid-19-media-work-in-emerging-economies/index.html
+    - /blog/tech-and-check-2020/index.html
+    - /blog/voicesontherise-mediathon-in-mexico/index.html
+    - /blog/3-things-we-learned-on-designing-collaborations-from-the-reboots-masterclass/index.html
+    - /blog/meedan-recognizes-world-press-freedom-day/index.html
+    - /blog/textfakes-deepfakes-and-the-power-of-context/index.html
+    - /blog/elections-promises-and-covid-19-three-years-in-supporting-fact-checking-and/index.html
+    - /blog/es/new-microgrants-for-covid-19-media-work-in-emerging-economies/index.html
+    - /blog/pt/new-microgrants-for-covid-19-media-work-in-emerging-economies/index.html
+    - /blog/ar/new-microgrants-for-covid-19-media-work-in-emerging-economies/index.html
+    - /jobs/research-fellow/index.html

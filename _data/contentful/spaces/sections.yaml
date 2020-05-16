@@ -2546,7 +2546,7 @@ section:
 - sys:
     id: 6XPVMfT6wvJe4EZDxyk3i7
     created_at: !ruby/object:DateTime 2020-05-06 21:58:44.076000000 Z
-    updated_at: !ruby/object:DateTime 2020-05-06 21:58:49.027000000 Z
+    updated_at: !ruby/object:DateTime 2020-05-14 15:09:09.796000000 Z
     content_type_id: section
     revision: 0
   title: Financials 2019
@@ -2561,33 +2561,31 @@ section:
   section_class: financials
   modules:
   - sys:
-      id: dRXovnFGidG9lBVcA6e2H
-      created_at: !ruby/object:DateTime 2019-06-20 22:04:48.550000000 Z
-      updated_at: !ruby/object:DateTime 2019-08-05 19:28:18.581000000 Z
+      id: 1d1qHQZffinnsvSeCUW7Nf
+      created_at: !ruby/object:DateTime 2020-05-14 14:34:52.784000000 Z
+      updated_at: !ruby/object:DateTime 2020-05-14 14:35:21.539000000 Z
       content_type_id: moduleLeadText
       revision: 1
-    content: We are pleased to share our financial report for 2018.
+    content: We are pleased to share our financial report for 2019.
   - sys:
-      id: 6rYz9XnMlEKhLWFX2xp9qV
-      created_at: !ruby/object:DateTime 2019-06-20 22:05:49.587000000 Z
-      updated_at: !ruby/object:DateTime 2019-08-05 19:28:54.627000000 Z
+      id: 344IXoFOZDvP7Bwl4aGFqQ
+      created_at: !ruby/object:DateTime 2020-05-14 14:35:56.186000000 Z
+      updated_at: !ruby/object:DateTime 2020-05-14 15:02:56.372000000 Z
       content_type_id: module2ColumnContent
-      revision: 1
+      revision: 0
     title: Revenue
     content:
     - sys:
-        id: 6MwbVl9tqWdzHMNs1Ilzrx
+        id: 4YcKE0bi800y6SOhbwzkZN
     - sys:
-        id: 62Up0kBXh4TWZw8GjwZqus
-    top_border: true
+        id: 1K7wpVeoD7ZwhbcfvHQ9PY
   - sys:
-      id: 4dBLLWuFXFz8hwlGfk6VR8
-      created_at: !ruby/object:DateTime 2019-06-20 22:09:27.532000000 Z
-      updated_at: !ruby/object:DateTime 2019-08-05 19:29:17.075000000 Z
+      id: BhdkHC0EJlLuTk3Bd6zUa
+      created_at: !ruby/object:DateTime 2020-05-14 15:07:22.282000000 Z
+      updated_at: !ruby/object:DateTime 2020-05-14 15:09:46.552000000 Z
       content_type_id: module2ColumnContent
       revision: 1
     title: Expenditures
     content:
     - sys:
-        id: 3SLisTwW0icDT715pMk6f5
-    top_border: true
+        id: 1L5KcytHZPeIxTtGuBPy3S
