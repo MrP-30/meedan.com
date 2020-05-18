@@ -865,9 +865,9 @@ annualReport:
   - sys:
       id: 25F9ID6QuWa4YaGM7sfRQb
       created_at: !ruby/object:DateTime 2020-05-06 21:46:52.323000000 Z
-      updated_at: !ruby/object:DateTime 2020-05-06 21:57:35.370000000 Z
+      updated_at: !ruby/object:DateTime 2020-05-17 15:02:06.865000000 Z
       content_type_id: section
-      revision: 0
+      revision: 4
     title: CEO's Note 2019
     cover_graphic:
       sys:
@@ -881,11 +881,19 @@ annualReport:
     section_class: introduction
     modules:
     - sys:
-        id: 6qAOA9ThbkaQVqtTK9hulB
+        id: 2eJV4MjwgHuO8I5VrjAv62
     - sys:
-        id: 1rW6yazco5VTWWcq0f4Skk
+        id: 6w2UYs8lx2SfiXz9cXZWjA
     - sys:
-        id: 4FOSPaw82qnfysoNybGj6g
+        id: 6FyGTssmse5HthvhXB5yie
+    - sys:
+        id: 4UIKJn5icbzIUX6uRPGGFp
+    - sys:
+        id: 6jURI3qZ4t6vvj2qKAMxgA
+    - sys:
+        id: 3ivRaYql4ZQUNjKsWR5O4g
+    - sys:
+        id: 1fuk9a5UC9eHUMQr8Xgk6r
     - sys:
         id: tz7MXJpslDwXGh7nBiuI1
     - sys:

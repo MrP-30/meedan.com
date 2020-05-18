@@ -7,9 +7,14 @@ h2: What are you looking for?
 ---
 {% assign stories = site.data.contentful.spaces.stories.story | sort: 'alt_date_string' | reverse  %}
 <div class="main-grid section-margin">
-    <div class="main-grid__1-12">
+    <div class="main-grid__1-3">
+        <div id="clear-refinements"></div>
+        <div id="filters-list"></div>
+    </div>
+    <div class="main-grid__4-12">
         <div class="search-box" id="search-searchbar"></div>
         <div class="module module-story-list section-margin" id="search-hits"></div>
+        <div id="pagination"></div>
     </div>
 </div>
 {% include algolia.html %}

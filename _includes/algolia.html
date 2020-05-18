@@ -1,19 +1,25 @@
 <!-- Including InstantSearch.js library and styling -->
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.6.0/dist/instantsearch-theme-algolia.min.css">
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7/themes/algolia-min.css">
 
 <script>
 // Instanciating InstantSearch.js with Algolia credentials
 const search = instantsearch({
-  appId: '{{ site.algolia.application_id }}',
-  indexName: '{{ site.algolia.index_name }}',
-  apiKey: '{{ site.algolia.search_only_api_key }}'
+  indexName: 'meedan.com',
+  searchClient: algoliasearch('XVQE72Q0TQ', 'd031b4f0809f3999da155451bffba6db'),
 });
 
 const hitTemplate = function(hit) {
     let url = `{{ site.baseurl }}${hit.url}#${hit.anchor}`;
     const title = hit._highlightResult.title.value;
+    if (hit.description) {
+      description = hit.description;
+    } else if (hit.short_description) {
+      description = hit.short_description;
+    } else {
+      description = hit.body;
+    }
     let breadcrumbs = '';
     if (hit._highlightResult.headings) {
         breadcrumbs = hit._highlightResult.headings.map(match => {
@@ -21,34 +27,41 @@ const hitTemplate = function(hit) {
         }).join(' > ')
     }
     return `
-    <div class="story-list-item">
-        <a class="tag" href="${url}">
-            ${breadcrumbs}
-        </a>
-        <div class="title-container">
-            <a class="title" href="${url}">${title}</a>
-        </div>
+    <div>
+      <div class="title-container">
+          <a class="title" href="${url}">${title}</a>
+      </div>
+      <div class="hit-description">
+        ${description}
+      </div>
     </div>
     `;
 }
 
 
 // Adding searchbar and results widgets
-search.addWidget(
+search.addWidgets([
   instantsearch.widgets.searchBox({
     container: '#search-searchbar',
-    placeholder: 'Search into posts...',
-    poweredBy: true // This is required if you're on the free Community plan
-  })
-);
-search.addWidget(
+  }),
+  instantsearch.widgets.clearRefinements({
+    container: '#clear-refinements',
+  }),
+  instantsearch.widgets.refinementList({
+    container: '#filters-list',
+    attribute: 'type',
+    searchable: true,
+  }),
   instantsearch.widgets.hits({
     container: '#search-hits',
     templates: {
-      item: hitTemplate
-    }
-  })
-);
+      item: hitTemplate,
+    },
+  }),
+  instantsearch.widgets.pagination({
+    container: '#pagination',
+  }),
+]);
 
 // Starting the search
 search.start();
